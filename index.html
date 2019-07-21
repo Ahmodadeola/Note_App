@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Note App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h3>Note App</h3>
+		</header>
+		<main>
+			<section class="note">
+				<span class="empty"><h4>No Note</h4></span>
+			</section>
+			<section class="options">
+				<span id="add" class="right">
+					<button>Add Note</button>
+				</span>
+				<span id="sort" class="left">
+					<button>Sort</button>
+				</span>
+			</section>
+			<template id="addDiv">
+				<div class="note-edit">
+					<select class="category">
+						<option selected disabled>No Category</option>
+						<option value="work">Work</option>
+						<option value="work">Study</option>
+						<option value="personal">personal</option>
+						<option value="personal">Family Affair</option>
+					</select>
+					<textarea
+						cols="50"
+						rows="15"
+						placeholder="Enter your note here"
+						name="note"
+					></textarea>
+					<button>Add Note</button>
+					<button class="return">Back</button>
+				</div>
+			</template>
+			<template id="addNote">
+				<div data-id="{{ id }}" class="note-list">
+					<p>
+						{{ brief }} <span class="time">{{ time }}</span>
+					</p>
+				</div>
+			</template>
+		</main>
+		<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cumque mollitia provident facilis! Veniam modi non iste provident dolores ad aliquam pariatur ratione similique molestiae quos, odit accusamus asperiores sapiente aperiam rerum facere nesciunt ea! Sed minus molestiae alias mollitia repellat, maiores tenetur, eius necessitatibus vel iste ipsum cupiditate assumenda harum consectetur libero perferendis voluptates quasi quae. Rem, sed nihil? -->
+		<script src="app.js"></script>
+	</body>
+</html>
