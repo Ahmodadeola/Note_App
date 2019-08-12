@@ -37,9 +37,12 @@ let alpha = {
 			time = model.notes[idx].time,
 			category = model.notes[idx].category;
 		let content = `
-			<i class="fa fa-arrow-left"></i>
-			<h3>${category}</h3><span class="time">${time}</span><br>
-			<p class="note-text">${text}</p>`;
+			<div class="note-content">
+				<i class="fa fa-arrow-left"></i>
+				<h3>${category}</h3><span class="time">${time}</span><br>
+				<p class="note-text">${text}</p>
+				<i class="fa fa-pencil-alt edit-text"></i>
+			</div>`;
 		console.log(text);
 		noteView.render(content);
 	},
@@ -210,6 +213,7 @@ let view2 = {
 	}
 };
 
+//handles variable initialization and render of note text
 let noteView = {
 	init() {
 		window.removeEventListener("resize", view2.resize);
@@ -222,12 +226,28 @@ let noteView = {
 		});
 	},
 
+	init2() {
+		this.editIcon = document.querySelector("i.edit-text");
+		let text;
+		// this.deleteIcon = document.querySelector("");
+
+		this.editIcon.addEventListener("click", () => {
+			text = window.noteDiv.innerHTML.split("<br>");
+			console.log(text);
+			text = text[3].split(/<\s+/);
+			console.log(text);
+		});
+	},
+
 	render(note) {
 		window.noteDiv.innerHTML = note;
 		document
 			.querySelector("i.fa.fa-arrow-left")
 			.addEventListener("click", () => view2.render(window.temp));
+		this.init2();
 	}
 };
+
+let noteView2 = {};
 
 alpha.init();

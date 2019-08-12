@@ -1,0 +1,24 @@
+My to-do list through 28/07/2019 - 04/07/2019
+1. Finish web developments exercises
+2. Finish the agrolyte master css
+3. Begin either React or Vue tutorial
+4. Study all course topics for the week
+6. Do Assignments 
+
+List of courses I am offering
+1. Discrete and Data structures 
+2. Computational Methods
+3. Ancilliary French II
+4. Mathematical Methods II
+5. Physics Lab II
+6. Linear Algebra
+7. Statistical Method
+
+Todo list through 2/08/2019 - 9/08/2019
+1. Begin Vuejs/React tutorial
+2. Study MAT topics of the week
+3 .Study sta222 topic of the week
+4. Study csc topics of the week
+5. Complete note-app and push to git repo
+6. Continue with agrolyte library planning and development
+7. Read and complete an exercise on A.I/M.L
